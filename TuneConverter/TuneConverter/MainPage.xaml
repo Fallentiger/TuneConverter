@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TuneConverter"
+             x:Class="TuneConverter.MainPage"
+             BackgroundColor="LightBlue">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--<Style TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="Accent"/>
+            </Style>-->
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BackgroundColor" Value="Snow"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <!--<Setter Property="FontSize" Value="10"/>-->
+                <!--<Setter Property="HorizontalTextAlignment" Value="Center"/>-->
+                <!--<Setter Property="VerticalTextAlignment" Value="Center"/>-->
+            </Style>
+            <Style TargetType="Editor">
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BackgroundColor" Value="Snow"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <!--<Setter Property="FontSize" Value="10"/>-->
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BackgroundColor" Value="Snow"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <!--<Setter Property="FontSize" Value="10"/>-->
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="BackgroundColor" Value="Snow"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <!--<Setter Property="FontSize" Value="10"/>-->
+                <!--<Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>-->
+            </Style>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <!--<RowDefinition Height="4*"/>-->
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Editor x:Name="TbInputTunes"
+                Margin="0"></Editor>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Picker x:Name="CbSrcTune" Title="原调"
+                    SelectedIndexChanged="CbSrcTune_SelectedIndexChanged"></Picker>
+            <Picker x:Name="CbDstTune" Title="目标调"
+                    Grid.Column="1"
+                    SelectedIndexChanged="CbDstTune_SelectedIndexChanged"></Picker>
+            <Button Grid.Column="2" Text="转换" Clicked="BtnConvert_Click"></Button>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnOctIncrease" 
+                    Grid.Column="0" 
+                    Text="升八度"
+                    Clicked="BtnAddOct_Click"></Button>
+            <Button x:Name="BtnOctDecrease" 
+                    Grid.Column="0" 
+                    Grid.Row="2"
+                    Text="降八度"
+                    Clicked="BtnMinusOct_Click"></Button>
+            <Button x:Name="BtnHalfTuneInscrese"
+                    Grid.Column="1" 
+                    Text="升半音"
+                    Clicked="BtnAddHalf_Click"></Button>
+            <Button x:Name="BtnHalfTuneDecrease"
+                    Grid.Column="1" 
+                    Grid.Row="2"
+                    Text="降半音"
+                    Clicked="BtnMinusHalf_Click"></Button>
+            <Label Grid.Row="1" 
+                   x:Name="TbOctOffset"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"></Label>
+            <Label Grid.Row="1" Grid.Column="1" 
+                   x:Name="TbHalfOffset"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"></Label>
+            <Button x:Name="BtnSimplify"
+                    Grid.Column="2"
+                    Text="合并括号"
+                    Clicked="BtnSimplify_Click"></Button>
+            <Button x:Name="BtnReset"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Text="重置设置"
+                    Clicked="BtnReset_Click"></Button>
+            <!--<Button x:Name="BtnAbout"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Text="关于"
+                    Clicked="BtnAbout_Clicked"
+                    IsVisible="False"></Button>-->
+
+
+            <!--<Grid Grid.Column="2"
+                  Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnMarkOnLeft"
+                        Grid.Column="0"
+                        Margin="1"
+                        Text="#1"
+                        Clicked="BtnChangeMarkSide"></Button>
+                <Button x:Name="BtnMarkOnRight"
+                        Grid.Column="1"
+                        Margin="1"
+                        Text="1#"
+                        Clicked="BtnChangeMarkSide"></Button>
+            </Grid>-->
+            <Button x:Name="BtnChangeSharpMark"
+                    Grid.Column="2" 
+                    Grid.Row="1"
+                    Clicked="BtnChangeSharpMark_Click"></Button>
+        </Grid>
+    </Grid>
+
+
+
+</ContentPage>
