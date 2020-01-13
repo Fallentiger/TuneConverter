@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuneConverter.UWP", "TuneCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuneConverter", "TuneConverter\TuneConverter\TuneConverter.csproj", "{4957F517-451F-4B24-B682-28401A622C72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuneConvertHelper", "TuneConvertHelper\TuneConvertHelper.csproj", "{61E8230B-785F-4BEC-A800-8C2C9E34ECA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuneConvertHelper", "TuneConvertHelper\TuneConvertHelper.csproj", "{61E8230B-785F-4BEC-A800-8C2C9E34ECA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuneConverter.WPF", "TuneConverter.WPF\TuneConverter.WPF.csproj", "{4FD86D41-4AE2-40A8-B272-13FE4CF60B2D}"
 EndProject
