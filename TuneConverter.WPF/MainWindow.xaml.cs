@@ -21,7 +21,7 @@ namespace TuneConverter.WPF
             this.Title = "转调工具" + version + " @FallenTiger";
         }
 
-        public readonly string version = "V1.1.0";
+        public readonly string version = "V1.0.0";
 
         TuneConvertHelper.TuneConverter tuneCVT;
 

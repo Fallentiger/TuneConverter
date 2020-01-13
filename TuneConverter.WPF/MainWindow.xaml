@@ -97,10 +97,10 @@
                     Click="BtnChangeSharpMark_Click">左侧升降号</Button>
             <Button Grid.Column="3" Grid.Row="2" Click="BtnReset_Click">重置设置</Button>
 
-            <Button Grid.Column="4" Grid.Row="0" Grid.RowSpan="2"
+            <Button Grid.Column="4" Grid.Row="0" Grid.RowSpan="3"
                     FontSize="28"
                     Click="BtnConvert_Click">转换</Button>
-            <Button Grid.Column="4" Grid.Row="2">关于</Button>
+            <!--<Button Grid.Column="4" Grid.Row="2">关于</Button>-->
 
 
         </Grid>
